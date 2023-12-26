@@ -1,0 +1,39 @@
+# DataSource Config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bsk_db?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: lh1.1.2.3
+
+# Log Config
+logging:
+  level:
+    com:
+      rd:
+        bsk:
+        mapper: debug
+
+# Mybatis-plus Config
+mybatis-plus:
+  # xml文件的位置
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  # 和表对应的实体类所在的包,可以使用 Emp 替代 com.rd.pojo.Emp
+  type-aliases-package: com.rd.bsk.pojo
+  configuration:
+    # 自动驼峰命名
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      # 主键 自动增长 auto_increment
+      id-type: auto
+      # 数据库类型 mysql
+      db-type: MYSQL
+      # 逻辑删除配置
+      # 删除前
+      logic-not-delete-value: 0
+      # 删除后
+      logic-delete-value: 1
+
+server:
+  port: 80

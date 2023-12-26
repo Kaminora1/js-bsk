@@ -1,0 +1,22 @@
+POST http://localhost:80/emp/login
+Content-Type: application/x-www-form-urlencoded
+
+id=99&content=new-element
+
+###
+GET http://localhost:80/emp/list
+Accept: application/json
+
+###
+
+POST http://localhost:80/emp/fenye
+Content-Type: application/x-www-form-urlencoded
+
+pageNum=2&pageSize=2
+
+
+
+
+
+
+

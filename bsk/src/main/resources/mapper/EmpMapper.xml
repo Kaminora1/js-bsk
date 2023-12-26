@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.rd.bsk.mapper.EmpMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.rd.bsk.pojo.Emp">
+        <id column="id" property="id" />
+        <result column="login_name" property="loginName" />
+        <result column="login_pwd" property="loginPwd" />
+        <result column="emp_name" property="empName" />
+        <result column="emp_phone" property="empPhone" />
+        <result column="emp_sex" property="empSex" />
+        <result column="emp_idcard" property="empIdcard" />
+        <result column="emp_salary" property="empSalary" />
+        <result column="emp_hiredate" property="empHiredate" />
+        <result column="emp_status" property="empStatus" />
+        <result column="emp_role" property="empRole" />
+        <result column="emp_mark" property="empMark" />
+        <result column="is_delete" property="isDelete" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, login_name, login_pwd, emp_name, emp_phone, emp_sex, emp_idcard, emp_salary, emp_hiredate, emp_status, emp_role, emp_mark, is_delete
+    </sql>
+
+</mapper>
